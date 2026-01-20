@@ -1,0 +1,123 @@
+/* Reset & fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container / Card */
+.container {
+    background: #fff;
+    width: 360px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+/* Search box */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: #667eea;
+}
+
+.search-box button {
+    padding: 12px 20px;
+    background: #667eea;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-box button:hover {
+    background: #5a67d8;
+    transform: scale(1.05);
+}
+
+/* Result styling */
+.result {
+    text-align: left;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #f7f7f7;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.result .word {
+    font-weight: 700;
+    font-size: 20px;
+    color: #333;
+}
+
+.result .meaning {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.result .example {
+    margin-top: 10px;
+    font-style: italic;
+    color: #777;
+    font-size: 15px;
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .search-box input, .search-box button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .result .word {
+        font-size: 18px;
+    }
+
+    .result .meaning, .result .example {
+        font-size: 14px;
+    }
+}
